@@ -70,6 +70,8 @@ artifacts/
 
 Optional export-time inputs and intermediates, such as `model_exp41_avg.nemo` and `model.onnx`, are not kept in the repository by default.
 
+The contents for `artifacts/` can be downloaded from: https://drive.google.com/drive/folders/1_fQzWo8yTGE-dmqCmp_-dj0UI3d3TRMZ?usp=sharing
+
 ## 1. Create the Python environment
 
 ```bash
