@@ -22,12 +22,12 @@ def main():
     model = nemo_asr.models.ASRModel.restore_from(args.nemo)
     model.export(str(output_dir / "model.onnx"))
 
-    with (output_dir / "tokens.txt").open("w", encoding="utf-8") as f:
+    with (output_dir / "vocab.txt").open("w", encoding="utf-8") as f:
         for i, token in enumerate([*model.tokenizer.vocab, "<blk>"]):
             f.write(f"{token} {i}\n")
 
     print(f"Created {output_dir / 'model.onnx'}")
-    print(f"Created {output_dir / 'tokens.txt'}")
+    print(f"Created {output_dir / 'vocab.txt'}")
 
 
 if __name__ == "__main__":
